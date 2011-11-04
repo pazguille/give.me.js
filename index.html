@@ -18,23 +18,20 @@
 		</form>
 
 		<script src="give.me.js"></script>
-		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="http://chico-ui.com.ar/versions/0.8.2/chico-min-0.8.2.js"></script>
+		<!--script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="http://chico-ui.com.ar/versions/0.8.2/chico-min-0.8.2.js"></script-->
 		<script>
-			/*giveme.js(["http://code.jquery.com/jquery.min.js", "http://chico-ui.com.ar/versions/0.8.2/chico-min-0.8.2.js"], function(){
-				console.log(jQuery.fn.jquery);
-				console.log(ch.version);
-			});*/
+			/* Async
+			giveme.js("http://code.jquery.com/jquery.js", function(){console.log("jQuery: " + jQuery.fn.jquery)})
+						.js("http://www.spaghettiblog.com.ar/js/give.me.js", function(){console.log("Giveme: " + giveme.version)})
+			*/
 
-			/*giveme.js("http://code.jquery.com/jquery.min.js", function(){
-				console.log(jQuery.fn.jquery);
-			});*/
-
-			/*giveme.js("http://code.jquery.com/jquery.min.js", function(){
-				console.log(jQuery.fn.jquery);
-			}).js("http://chico-ui.com.ar/versions/0.8.2/chico-min-0.8.2.js", function(){
-				console.log("Again: " + jQuery.fn.jquery);
-			});*/
+			/* Async, NonBlocking, wait
+			giveme.js(["http://code.jquery.com/jquery.js","http://www.spaghettiblog.com.ar/js/give.me.js"], function(){
+				console.log("jQuery: " + jQuery.fn.jquery)
+				console.log("GiveMe: " + giveme.version);
+			});
+			*/
 		</script>
 	</body>
 </html>
