@@ -12,26 +12,29 @@
 	</head>
 
 	<body>
-		<form action="index.html" method="get">
-			<p><input type="text" class="lala"/></p>
-			<p><textarea></textarea></p>
-		</form>
 
 		<script src="give.me.js"></script>
-		<!--script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="http://chico-ui.com.ar/versions/0.8.2/chico-min-0.8.2.js"></script-->
-		<script>
-			/* Async
-			giveme.js("http://code.jquery.com/jquery.js", function(){console.log("jQuery: " + jQuery.fn.jquery)})
-						.js("http://www.spaghettiblog.com.ar/js/give.me.js", function(){console.log("Giveme: " + giveme.version)})
-			*/
+		<!--script src="http://ui.ml.com/libs/js/jquery-debug.js"></script>
+		<script src="http://chico.com:8080/latest/js?debug=true"></script-->
 
-			/* Async, NonBlocking, wait
-			giveme.js(["http://code.jquery.com/jquery.js","http://www.spaghettiblog.com.ar/js/give.me.js"], function(){
+		<script>
+			/* js */
+			/* Async 
+			giveme
+				.js("http://ui.ml.com/libs/js/jquery-debug.js", function(){console.log("jQuery: " + jQuery.fn.jquery)})
+				.js("http://chico.com:8080/latest/js?debug=true", function(){console.log("Chico: " + ch.version)})
+*/
+
+/*
+			giveme.js(["http://chico.com:8080/latest/js?debug=true","http://chico.com:8080/latest/js","http://ui.ml.com/libs/js/jquery-debug.js"], function() {
 				console.log("jQuery: " + jQuery.fn.jquery)
-				console.log("GiveMe: " + giveme.version);
+				console.log("Chico: " + ch.version);
 			});
-			*/
+*/
+
+			/* css */ // calbacks don't work!. Does tag.load work fine?
+			//giveme.css("http://chico.com:8080/latest/css?debug=true", function(){ console.log("Css loaded!!!") });
+
 		</script>
 	</body>
 </html>
