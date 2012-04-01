@@ -7,8 +7,6 @@ http://pazguille.github.com/give.me.js/
 # Syntax
 --------
 
-Basic script loader:
-
 ``` js
 give.me("http://chico-ui.com.ar/versions/latest/chico.js", function () {
 	console.log("jQuery + Chico loaded!");
