@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Give.me.js by pazguille</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Give.me.js</h1>
+        <p>Give.me.js a loader JavaScript files.</p>
+        <p class="view"><a href="https://github.com/pazguille/give.me.js">View the Project on GitHub <small>pazguille/give.me.js</small></a></p>
+        <ul>
+          <li><a href="https://github.com/pazguille/give.me.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pazguille/give.me.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pazguille/give.me.js">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Give.me.js</h1>
+
+<p>give.me.js a loader JavaScript files</p>
+
+<h2>Syntax</h2>
+
+<div class="highlight">
+<pre><span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/chico.js">http://chico-ui.com.ar/versions/latest/chico.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"jQuery + Chico loaded!"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre><span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">([</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/jquery.js">http://chico-ui.com.ar/versions/latest/jquery.js</a>"</span><span class="p">,</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/chico.js">http://chico-ui.com.ar/versions/latest/chico.js</a>"</span><span class="p">],</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"jQuery + Chico loaded!"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre><span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/jquery.js">http://chico-ui.com.ar/versions/latest/jquery.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/chico.js">http://chico-ui.com.ar/versions/latest/chico.js</a>"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre><span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/latest/jquery.js">http://chico-ui.com.ar/versions/latest/jquery.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">give</span><span class="p">.</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.7.4/chico-0.7.4.js">http://chico-ui.com.ar/versions/0.7.4/chico-0.7.4.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.7.4"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.9.2/chico-0.9.2.js">http://chico-ui.com.ar/versions/0.9.2/chico-0.9.2.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.9.2"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.9.3/chico-0.9.3.js">http://chico-ui.com.ar/versions/0.9.3/chico-0.9.3.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.9.3"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.10/chico-0.10.js">http://chico-ui.com.ar/versions/0.10/chico-0.10.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.10"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.10.1/chico-0.10.1.js">http://chico-ui.com.ar/versions/0.10.1/chico-0.10.1.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.10.1"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.10.2/chico-0.10.2.js">http://chico-ui.com.ar/versions/0.10.2/chico-0.10.2.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.10.2"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nx">me</span><span class="p">(</span><span class="s2">"<a href="http://chico-ui.com.ar/versions/0.10.3/chico-0.10.3.js">http://chico-ui.com.ar/versions/0.10.3/chico-0.10.3.js</a>"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"0.10.3"</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre>
+</div>
+
+
+<h2>Contact</h2>
+
+<ul>
+<li>Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)</li>
+<li>e-mail: <a href="mailto:guille87paz@gmail.com">guille87paz@gmail.com</a>
+</li>
+<li>Twitter: <a href="http://twitter.com/pazguille">@pazguille</a>
+</li>
+</ul><h2>License</h2>
+
+<p>Copyright (c) 2012</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pazguille">pazguille</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
