@@ -1,8 +1,8 @@
-Give.me.js
-==========
+# Give.me.js
+
 give.me.js a loader JavaScript files
 
-## Syntax
+## Examples
 ``` js
 give.me("http://chico-ui.com.ar/versions/latest/chico.js", function () {
 	console.log("jQuery + Chico loaded!");
@@ -45,10 +45,11 @@ give.me("http://chico-ui.com.ar/versions/latest/jquery.js", function () {
 - Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)
 - e-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
 - Twitter: [@pazguille](http://twitter.com/pazguille)
+- Web: [http://pazguille.me](http://pazguille.me)
 
 
-## License
-Copyright (c) 2012
+## License (The MIT License)
+Copyright (c) 2012 [@pazguille](http://twitter.com/pazguille)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
